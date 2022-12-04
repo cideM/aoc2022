@@ -1,5 +1,7 @@
 # :christmas_tree: Advent of Code 2022 :santa:
 
+Also see my [Zig solutions](https://github.com/cideM/aoc2022-zig)!
+
 ## Progress (04/25)
 
 |     | Lua     |

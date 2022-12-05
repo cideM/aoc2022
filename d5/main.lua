@@ -2,6 +2,7 @@ local crates, crates_2 = {}, {}
 
 for line in io.lines() do
 	if #crates == 0 then
+		-- Infer the number of stacks from the length of the line
 		local num_crates = ((#line - 3) / 4) + 1
 		for _ = 1, num_crates do
 			table.insert(crates, {})
@@ -10,6 +11,7 @@ for line in io.lines() do
 	end
 
 	if string.find(line, "[", 1, true) then
+    -- Insert the starting crates into their respective stacks
 		local crate_index = 1
 		for i = 2, #line, 4 do
 			local v = string.sub(line, i, i)
@@ -26,11 +28,12 @@ for line in io.lines() do
 		amount, from, to = tonumber(amount), tonumber(from), tonumber(to)
 
 		local source, dest = crates_2[from], crates_2[to]
-		-- Moving does not remove the values from "source", so we do that with the
-		-- second table.move
+    -- Part 2 logic: moving does not remove the values from "source", so we do
+    -- that with the second table.move
 		table.move(source, #source - (amount - 1), #source, #dest + 1, dest)
 		table.move({}, 1, amount, #source - (amount - 1), source)
 
+    -- Part 1 logic
 		for _ = 1, amount do
 			local crate = table.remove(crates[from])
 			table.insert(crates[to], crate)

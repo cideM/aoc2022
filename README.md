@@ -2,7 +2,7 @@
 
 Also see my [Zig solutions](https://github.com/cideM/aoc2022-zig)!
 
-## Progress (04/25)
+## Progress (05/25)
 
 |     | Lua     |
 | --- | ------- |

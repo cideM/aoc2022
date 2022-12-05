@@ -19,7 +19,7 @@
             coreutils
             moreutils
             jq
-            lua
+            lua5_4
           ];
         };
       }

@@ -10,7 +10,7 @@ Also see my [Zig solutions](https://github.com/cideM/aoc2022-zig)!
 | 2   | :bell:  |
 | 3   | :bell:  |
 | 4   | :bell:  |
-| 5   | :zzz:  |
+| 5   | :bell:  |
 | 6   | :zzz:  |
 | 7   | :zzz:  |
 | 8   | :zzz:  |

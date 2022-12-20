@@ -43,9 +43,7 @@ $ cat code | sed 's/^/    /' | pbcopy`
 
 Turn it into a message:
 ```text
-# Lua
-
-[Both parts]()
+# [Lua]()
 
 [GitHub Repository](https://github.com/cideM/aoc2022)
 ```

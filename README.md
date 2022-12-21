@@ -2,7 +2,7 @@
 
 Also see my [Zig solutions](https://github.com/cideM/aoc2022-zig)!
 
-## Progress (20/25)
+## Progress (21/25)
 
 |     | Lua     |
 | --- | ------- |
@@ -26,7 +26,7 @@ Also see my [Zig solutions](https://github.com/cideM/aoc2022-zig)!
 | 18  | :bell:  |
 | 19  | :bell:  |
 | 20  | :bell:  |
-| 21  | :zzz:  |
+| 21  | :bell:  |
 | 22  | :zzz:  |
 | 23  | :zzz:  |
 | 24  | :zzz:  |
@@ -44,6 +44,8 @@ $ cat code | sed 's/^/    /' | pbcopy`
 Turn it into a message:
 ```text
 # [Lua]()
+
+60 lines of code according to tokei when formatted with stylua.
 
 [GitHub Repository](https://github.com/cideM/aoc2022)
 ```

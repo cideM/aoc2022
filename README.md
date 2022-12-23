@@ -45,7 +45,7 @@ Turn it into a message:
 ```text
 # [Lua]()
 
-60 lines of code according to tokei when formatted with stylua.
+60 lines of code according to `tokei` when formatted with `stylua`.
 
 [GitHub Repository](https://github.com/cideM/aoc2022)
 ```

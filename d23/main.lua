@@ -4,10 +4,7 @@ local function empty_ground_tiles(elves)
 	local num_elves = 0
 	for _, pos in pairs(elves) do
 		local x, y = table.unpack(pos)
-		minx = math.min(minx, x)
-		miny = math.min(miny, y)
-		maxx = math.max(maxx, x)
-		maxy = math.max(maxy, y)
+		minx, miny, maxx, maxy = math.min(minx, x), math.min(miny, y), math.max(maxx, x), math.max(maxy, y)
 		num_elves = num_elves + 1
 	end
 
@@ -15,20 +12,23 @@ local function empty_ground_tiles(elves)
 end
 
 local function poskey(pos)
-	return pos[1] + 10000 * pos[2] -- max is a best guess, but reduces time from ~9s to ~4s
+	return pos[2] + 10000 * pos[1] -- max is a best guess, but reduces time from ~9s to ~4s
 end
 
-local grid, elves = {}, {}
-for line in io.lines() do
-	local row = {}
-	for c in string.gmatch(line, ".") do
-		table.insert(row, ".")
-		if c == "#" then
-			local pos = { #row, #grid + 1 }
-			elves[poskey(pos)] = pos
+local elves = {}
+do
+	local rows = 1
+	for line in io.lines() do
+		local col = 1
+		for c in string.gmatch(line, ".") do
+			if c == "#" then
+				local pos = { col, rows }
+				elves[poskey(pos)] = pos
+			end
+			col = col + 1
 		end
+		rows = rows + 1
 	end
-	table.insert(grid, row)
 end
 
 local directions = {
@@ -84,9 +84,7 @@ while not none_moved do
 
 	for new_elf_pos_key, v in pairs(proposals) do
 		if #v == 1 then
-			none_moved = false
-			elves[v[1][1]] = nil
-			elves[new_elf_pos_key] = v[1][2]
+			none_moved, elves[v[1][1]], elves[new_elf_pos_key] = false, nil, v[1][2]
 		end
 	end
 

@@ -19,7 +19,10 @@
             coreutils
             moreutils
             jq
-            lua5_4
+            alejandra
+            lua54Packages.lua
+            lua-language-server
+            stylua
           ];
         };
       }

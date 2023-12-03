@@ -2,6 +2,12 @@
 
 Also see my [Zig solutions](https://github.com/cideM/aoc2022-zig)!
 
+## Quickstart
+
+```shell
+$ fd . --no-hidden --no-ignore | entr -c -s 'lua d6/main.lua < d6/input.txt'
+```
+
 ## Progress (25/25)
 
 |     | Lua     |
